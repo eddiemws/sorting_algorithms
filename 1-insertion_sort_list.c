@@ -1,6 +1,11 @@
 #include "sort.h"
 
-
+/**
+ * swap - Swap nodes on list.
+ * @list: pointer to head of list.
+ * @current: pointer to current node of list.
+ * @previous: pointer to previous node of list.
+ */
 void swap(listint_t **list, listint_t *current, listint_t *previous)
 {
 	if (current->next)

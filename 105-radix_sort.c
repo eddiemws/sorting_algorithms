@@ -8,27 +8,7 @@
  * @exp: the digit to sort by (place value)
  * @output: a temporary array to store the sorted elements
  */
-void count_sort(int *arr, size_t size, int exp, int *output) {
-    int i, count[10] = {0}; // Assuming base 10 (0-9)
 
-    // Count occurrences of each digit in the current 'exp' place
-    for (i = 0; i < size; i++)
-        count[(arr[i] / exp) % 10]++;
-
-    // Calculate cumulative count (needed for stable sorting)
-    for (i = 1; i < 10; i++)
-        count[i] += count[i - 1];
-
-    // Place elements in output array based on count
-    for (i = size - 1; i >= 0; i--) {
-        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-        count[(arr[i] / exp) % 10]--;
-    }
-
-    // Copy the sorted elements back to the original array
-    for (i = 0; i < size; i++)
-        arr[i] = output[i];
-}
 
 /**
  * radix_sort - sorts an array of integers in ascending order

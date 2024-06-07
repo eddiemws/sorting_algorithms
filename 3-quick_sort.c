@@ -1,12 +1,7 @@
 #include "sort.h"
 #include <stdio.h>
 
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+
 
 int lomuto_partition(int *array, int low, int high, size_t size)
 {

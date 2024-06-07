@@ -24,3 +24,23 @@ void swap(listint_t **list, listint_t *current, listint_t *previous)
  * @list: list of integers
  * Return: nothing
  */
+void insertion_sort_list(listint_t **list)
+{
+	listint_t *previous = NULL, *current = NULL, *next = NULL;
+
+	if (!list || !(*list))
+		return;
+	for (current = (*list)->next; current; current = next)
+	{
+		next = current->next;
+		previous = current->prev;
+
+		for (; previous && current->n < previous->n; previous = current->prev)
+		{
+			previous->next = current->next;
+			swap(list, current, previous);
+			previous->prev = current;
+			print_list(*list);
+		}
+	}
+}

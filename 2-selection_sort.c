@@ -7,7 +7,16 @@
  * @min: value to swap with start point.
  * Return: nothing.
  */
+void swap(int *array, size_t start, size_t min)
+{
+	int a, b;
 
+	a = array[start];
+	b = array[min];
+
+	array[start] = b;
+	array[min] = a;
+}
 
 /**
  * selection_sort - Sort an array with selection algorithm.

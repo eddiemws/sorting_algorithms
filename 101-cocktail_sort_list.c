@@ -15,28 +15,7 @@ void cocktail_sort_list(listint_t **list)
     if (list == NULL || *list == NULL || (*list)->next == NULL)
         return;
 
-    while (swapped)
-    {
-        swapped = 0;
-        /* Forward iteration (similar to bubble sort) */
-        for (tmp = *list; tmp->next != NULL; tmp = tmp->next)
-        {
-            if (tmp->n > tmp->next->n)
-            {
-                if (tmp->prev != NULL)
-                    tmp->prev->next = tmp->next;
-                else
-                    *list = tmp->next;
-                tmp->next->prev = tmp->prev;
-                tmp->prev = tmp->next;
-                tmp->next = tmp->next->next;
-                tmp->prev->next = tmp;
-                if (tmp->next != NULL)
-                    tmp->next->prev = tmp;
-                swapped = 1;
-                printf("\n");
-                print_list(*list);
-            }
+   
         }
         if (!swapped)
             break;

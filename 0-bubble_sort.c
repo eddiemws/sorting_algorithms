@@ -7,7 +7,8 @@
  */
 
 
-
+array[start] = temp;
+}
 void swap(int *array, size_t start, size_t next)
 {
 	size_t temp = array[next];

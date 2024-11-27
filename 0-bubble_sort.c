@@ -18,7 +18,7 @@ void swap(int *array, size_t start, size_t next)
 }
 
 /**
- * bubble_sort - Sort an array with bubble algorithm.
+ * bubble_sort -  Sort an array with bubble algorithm.
  * @array: the array to sort.
  * @size: size of the array.
  * Return: nothing

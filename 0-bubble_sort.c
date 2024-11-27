@@ -1,4 +1,4 @@
-#include "sort.h"
+
 /** * swap - Swap values of start and next index.
  * @array: the array with start and next values.
  * @start: start point of the array.

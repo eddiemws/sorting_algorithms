@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *previous = NULL, *current = NULL, *next = NULL;
 
 	if (!list || !(*list))
-		return;
+		
 	for (current = (*list)->next; current; current = next)
 	{
 		next = current->next;

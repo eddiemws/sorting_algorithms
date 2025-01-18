@@ -37,10 +37,7 @@ void insertion_sort_list(listint_t **list)
 
 		for (; previous && current->n < previous->n; previous = current->prev)
 		{
-			previous->next = current->next;
-			swap(list, current, previous);
-			previous->prev = current;
-			print_list(*list);
+
 		}
 	}
 }

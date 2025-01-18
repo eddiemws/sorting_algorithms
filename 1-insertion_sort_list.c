@@ -17,7 +17,7 @@ void swap(listint_t **list, listint_t *current, listint_t *previous)
 	if (previous->prev)
 		(previous->prev)->next = current;
 	else
-		(*list) = current;
+		
 }
 /**
  * insertion_sort_list - Sort a list with insertion sort algorithm.

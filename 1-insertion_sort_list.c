@@ -24,7 +24,7 @@ void swap(listint_t **list, listint_t *current, listint_t *previous)
  * @list: list of integers
  * Return: nothing
  */
-
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *previous = NULL, *current = NULL, *next = NULL;
 
